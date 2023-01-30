@@ -1,0 +1,237 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 100%;
+    background: var(--primary-color);
+
+}
+
+*,
+*::before
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1706px;
+    padding: 0 auto;
+    margin: 0 auto;
+    height: 177px;
+}
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.7s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+/***************** Scroll *********************/
+::-webkit-scrollbar{
+    width: 30px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    border: 0.5rem solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #CD967E;
+}
+
+/***************** Header *********************/
+
+
+.header{
+    padding: 12px 0;
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 240px;
+}
+
+.logo{
+    width: 222px;
+    height: 222px;
+    transition: 0.5s;
+}
+.logo:hover{
+    transition: 0.5s;
+    width: 232px;
+    height: 232px;
+}
+.menu_list{  
+    list-style: none;
+    display: flex;
+}
+.menu_list-item{
+    margin: 0 45px;
+}
+li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #CD967E;
+    margin: auto;
+    display: block;
+    transition: 1s;
+}
+li a:hover::after{
+    width: 100%;
+    transition: width 0.3s linear;  
+}
+li a:hover {
+    color: #CD967E;
+    transition: 1s;   
+}
+.menu_list-link{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 41.15px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+#Lightmodeicon {
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    position: absolute;
+    top: 120px;
+}
+.menu {
+    text-align: right;
+}
+/***************** intro **************^*****/
+.intro_background{
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    margin-top: 230px;
+
+}
+.intro_bg-img{
+    display: block;
+    position: absolute;
+    margin-left: 1000px;
+    height: 754px;
+    margin-top: 16px;
+    transition: 1s;
+    z-index: 1;
+}
+.intro_bg-img:hover {
+    transform: rotate3d(1, -300, 1, -15deg);
+    filter: drop-shadow(55px 0px 3px #CD967E);
+}
+.container_inner_text{
+    display: block;
+    margin-top: 225px;
+    position: absolute;
+    align-items: center;
+    margin-left: 300px;
+}
+.span1 {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 41.15px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+.container_inner_text2{
+    display: block;
+    margin-top: 290px;
+    position: absolute;
+    align-items: center;
+    margin-left: 329px;
+}
+.span2{
+    display: block;
+    font-size: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41.15px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: justify;
+    -moz-text-align-last: right;
+    text-align-last: right;
+}
+.span1{
+    transition: 1s;
+}
+.span1:hover{
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+.span2{
+    transition: 1s;
+}
+.span2:hover{
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+.popup-content{
+    position: absolute;
+    width: 500px;
+    height: 349px;
+    left: 900px;
+    top: 600px;
+    background: var(--primary-color) transparent;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.popup-content:hover{
+    left: 700px;
+    background: #424242;
+    border-left: 8px solid #CD967E;
+    border-top: 8px solid #CD967E;
+    border-bottom: 8px solid #CD967E;
+    border-style: double;
+}
+.Arrow-icon{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 900px;
+    top: 750px;
+    transition: 1s;
+    transform: rotate(270deg);
+}
+.H1 {
+    color: var(--primary-color);
+    position: absolute;
+    left: 20px;
+}
+.H4 {
+    position: relative;
+    top: 57.6px;
+    left: 20px;
+    color: var(--primary-color);
+}
